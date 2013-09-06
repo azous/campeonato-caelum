@@ -35,13 +35,13 @@ public class CadastroJogador implements Executavel {
 
 			File file = new File("jogadores.txt");
 
-			ListaJogadores lj = new ListaJogadores();
-			Jogador jogador = new Jogador(nome + "," + cpf + "," + idade);
-			Set<Jogador> sj = lj.listaDeJogadores();
-			
-			if(sj.contains(jogador)){
-				throw new JogadorJaExisteException();
-			}
+//			ListaJogadores lj = new ListaJogadores();
+//			Jogador jogador = new Jogador(nome + "," + cpf + "," + idade);
+//			Set<Jogador> sj = lj.listaDeJogadores();
+//			
+//			if(sj.contains(jogador)){
+//				throw new JogadorJaExisteException();
+//			}
 			
 			try (PrintStream ps = new PrintStream(new FileOutputStream(file,
 					true));) {

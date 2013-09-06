@@ -11,18 +11,19 @@ public class Time {
 		this.setNome(string);
 	}
 
-	public boolean contemJogador(Jogador jogador){
+	public boolean contemJogador(Jogador jogador) {
 		return this.jogadores.contains(jogador);
 	}
-	
+
 	public void listaJogadores() {
 		System.out.println(this.getNome());
-		for(Jogador j : this.jogadores){
+		for (Jogador j : this.jogadores) {
 			j.mostraJogador();
 		}
 	}
 
-	public void setJogador(Jogador jogador) {
+	public void contratarJogador(Jogador jogador) {
+		// time com no maximo 3 jogadores
 		this.jogadores.add(jogador);
 	}
 

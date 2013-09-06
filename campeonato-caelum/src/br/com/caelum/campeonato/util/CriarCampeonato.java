@@ -1,6 +1,8 @@
 package br.com.caelum.campeonato.util;
 
-public class SorteiaTimes implements Executavel{
+import br.com.caelum.campeonato.participantes.Campeonato;
+
+public class CriarCampeonato implements Executavel{
 
 	@Override
 	public boolean executa() {
@@ -8,6 +10,8 @@ public class SorteiaTimes implements Executavel{
 		ListaJogadores lj = new ListaJogadores();
 		Campeonato campeonato = new Campeonato();
 		campeonato.sortearTimes(lj.listaDeJogadores());
+		
+		campeonato.fazerTabelas();
 		
 		return true;
 	}
