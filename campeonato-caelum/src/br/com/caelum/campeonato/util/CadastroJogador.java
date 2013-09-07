@@ -13,7 +13,7 @@ import br.com.caelum.campeonato.participantes.Jogador;
 public class CadastroJogador implements Executavel {
 
 	@Override
-	public boolean executa() throws JogadorJaExisteException {
+	public boolean executar() throws JogadorJaExisteException {
 		// Cadastra jogador e salva em arquivo
 		String nome;
 		String cpf;
@@ -58,6 +58,7 @@ public class CadastroJogador implements Executavel {
 		} while (confirm.equals("Y"));
 		
 		System.out.println("Jogadores cadastrados com sucesso!");
+		scanner.close();
 		return true;
 	}
 

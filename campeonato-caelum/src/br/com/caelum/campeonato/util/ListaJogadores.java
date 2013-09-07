@@ -12,7 +12,7 @@ import br.com.caelum.campeonato.participantes.Jogador;
 public class ListaJogadores implements Executavel {
 
 	@Override
-	public boolean executa() {
+	public boolean executar() {
 
 		// lista os objetos
 		Set<Jogador> jogadores = this.listaDeJogadores();

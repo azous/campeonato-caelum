@@ -32,8 +32,14 @@ public class Teste {
 			System.out.println(" listar | Listar Jogadores");
 			System.out.println(" campeonato | Criar Campeonato");
 
+			String next = scanner.next();
+			
 			try {
-				b = map.get(scanner.next()).executa();
+				if(map.containsKey(next)){
+					b = map.get(next).executar();
+				}else{
+					System.out.println("\nOpcao \'" + next + "\' inexistente!\n");
+				}
 			} catch (JogadorJaExisteException e) {
 				System.out.println("\n" + e.toString() + "\n");
 			}

@@ -5,13 +5,14 @@ import br.com.caelum.campeonato.participantes.Campeonato;
 public class CriarCampeonato implements Executavel{
 
 	@Override
-	public boolean executa() {
+	public boolean executar() {
 	
 		ListaJogadores lj = new ListaJogadores();
 		Campeonato campeonato = new Campeonato();
 		campeonato.sortearTimes(lj.listaDeJogadores());
 		
-		campeonato.fazerTabelas();
+		Thread t1 = new Thread(campeonato);
+		t1.start();
 		
 		return true;
 	}
